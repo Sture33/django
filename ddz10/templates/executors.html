@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Executors</title>
+    <link rel="stylesheet" href="{%static 'style.css'%}">
+</head>
+<body>
+    <div class="block">
+        {%for i in executors%}
+        <a href="{% url 'detail' i.genre.name i.slug %}" class="aa">{{i.name}} {{i.surname}}</a>
+        {%endfor%}
+    </div>
+</body>
+</html>

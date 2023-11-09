@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link rel="stylesheet" href="{%static 'style.css'%}">
+</head>
+<body>
+
+    <div class="block">
+        {%for genre in genres%}
+        <a href="{% url 'executor' genre.name %}" class="aa">{{genre.name}}</a>
+        {%endfor%}
+    </div>
+</body>
+</html>
